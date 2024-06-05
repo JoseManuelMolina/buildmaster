@@ -1,14 +1,8 @@
-// api.get('/clientes')
-// api.post('/clientes', client)
-// api.put(`/clientes/editar/${client.id}`, client)
-// api.delete(`/clientes/borrar/${client.id}`)
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Button, Modal } from 'react-bootstrap';
 import ProjectsList from '../components/ProjectsList';
 import ProjectForm from '../components/ProjectForm';
-import ProjectDetails from '../components/ProjectDetails';
-import EditProjectForm from '../components/ProjectClientForm';
-import DeleteProjectButton from '../components/DeleteProjectButton';
+import EditProjectForm from '../components/EditProjectForm';
 import api from '../api';
 
 function ProjectsPage() {
@@ -17,9 +11,8 @@ function ProjectsPage() {
     const [currentProject, setCurrentProject] = useState(null);
     const [showAddProject, setShowAddProject] = useState(false);
     const [showEditProject, setShowEditProject] = useState(false);
-    const [showDeleteProject, setShowDeleteProject] = useState(false);
     const [showDeleteSuccess, setShowDeleteSuccess] = useState(false);
-    const [showDeleteError, setShowDeleteError] = useState(false); // New state variable
+    const [showDeleteError, setShowDeleteError] = useState(false);
     const [deleteErrorMessage, setDeleteErrorMessage] = useState('');
 
     useEffect(() =>{
@@ -38,13 +31,21 @@ function ProjectsPage() {
         });
     };
 
+    const editProject = (project) =>{
+        api.put(`/proyectos/${project.id}`, project).then((response) =>{
+            setProjects(projects.map((p) => p.id === project.id? project : p));
+            setCurrentProject(null);
+            setShowEditProject(false);
+        })
+    };
+
     const onDeleteProject = (project) => {
         api.delete(`/proyectos/${project.id}`)
-            .then((response) => {
+           .then((response) => {
                 setProjects(projects.filter((p) => p.id!== project.id));
                 setShowDeleteSuccess(true);
             })
-            .catch((error) => {
+           .catch((error) => {
                 setDeleteErrorMessage(error.message);
                 setShowDeleteError(true); // Show the error modal
             });
@@ -59,10 +60,14 @@ function ProjectsPage() {
     };
 
     const onViewProject = (project) => {
-    setCurrentProject(project);
-    setShowEditProject(false);
-    setShowDeleteProject(false);
-    window.location.href = `/project/${project.id}`;
+        setCurrentProject(project);
+        setShowEditProject(false);
+        window.location.href = `/project/${project.id}`;
+    };
+
+    const onEditProject = (project) => {
+        setCurrentProject(project);
+        setShowEditProject(true);
     };
 
     return(
@@ -81,10 +86,15 @@ function ProjectsPage() {
                     />
                     {currentProject && (
                         <>
-                            
+                            <EditProjectForm
+                                project={currentProject}
+                                onEditProject={editProject}
+                                show={showEditProject}
+                                onHide={() => setShowEditProject(false)}
+                            />
                         </>
                     )}
-                    <ProjectsList projects={projects} onViewProject={onViewProject}  onDeleteProject={onDeleteProject}/>
+                    <ProjectsList projects={projects} onViewProject={onViewProject} editProject={editProject} onDeleteProject={onDeleteProject} clients={clients}/>
                     <Modal show={showDeleteSuccess} onHide={handleCloseDeleteSuccess}>
                         <Modal.Header closeButton>
                             <Modal.Title>Projecto Borrado</Modal.Title>

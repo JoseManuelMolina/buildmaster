@@ -3,7 +3,7 @@ import { Table, Modal, Button } from 'react-bootstrap';
 import ProjectDetails from './ProjectDetails';
 import DeleteProjectButton from './DeleteProjectButton';
 
-function ProjectsList({ projects, onViewProject, onDeleteProject }) {
+function ProjectsList({ projects, onViewProject, editProject, onDeleteProject, clients }) {
   const [showModal, setShowModal] = useState(false);
   const [currentProject, setCurrentProject] = useState({});
 
@@ -12,6 +12,7 @@ function ProjectsList({ projects, onViewProject, onDeleteProject }) {
   }
 
   const handleEditProject = (editedProject) => {
+    editProject(editedProject);
     setCurrentProject(editedProject);
   };
 
@@ -41,7 +42,7 @@ function ProjectsList({ projects, onViewProject, onDeleteProject }) {
             <th>Categoría</th>
             <th>Plano</th>
             <th>Cliente</th>
-            <th></th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -78,7 +79,7 @@ function ProjectsList({ projects, onViewProject, onDeleteProject }) {
         </Modal.Header>
         <Modal.Body>
           {currentProject && (
-            <ProjectDetails project={currentProject} onEditProject={handleEditProject} />
+            <ProjectDetails project={currentProject} onEditProject={handleEditProject} clients={clients}/>
           )}
         </Modal.Body>
       </Modal>
