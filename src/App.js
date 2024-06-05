@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Link, Routes } from 'react-router-dom';
 import ClientsPage from './pages/ClientsPage';
 import Dashboard from './pages/Dashboard';
 import ProjectsPage from './pages/ProjectsPage';
+import AdvancesPage from './components/AdvancesPage';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
@@ -19,14 +20,16 @@ function App() {
                 <Nav.Link as={Link} to="/">Dashboard</Nav.Link>
                 <Nav.Link as={Link} to="/clients">Clients</Nav.Link>
                 <Nav.Link as={Link} to="/projects">Projects</Nav.Link>
+                <Nav.Link as={Link} to="/advances">Advances</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
-          <div className="col-md-12">
+          <div className="col-md-12 mt-5 pt-3" >
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/clients" element={<ClientsPage />} />
               <Route path="/projects" element={<ProjectsPage />} />
+              <Route path="/advances" element={<AdvancesPage />} />
             </Routes>
           </div>
         </div>
