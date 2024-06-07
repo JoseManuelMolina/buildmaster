@@ -74,7 +74,7 @@ function ProjectsPage() {
         <Container>
             <Row>
                 <Col md="12">
-                    <h1>Projects</h1>
+                    <h1>Proyectos</h1>
                     <Button variant="primary" onClick={()=> setShowAddProject(true)}>
                         Add Project
                     </Button>
