@@ -70,7 +70,7 @@ function SuppliersPage(){
     const onViewSupplier = (supplier) => {
         setCurrentSupplier(supplier);
         setShowEditSupplier(false);
-        window.location.hred = `/supplier/${supplier.id}`;
+        window.location.href = `/supplier/${supplier.id}`;
     };
     const onEditSupplier = (supplier) => {
         setCurrentSupplier(supplier);
@@ -82,42 +82,42 @@ function SuppliersPage(){
         <Container>
             <Row>
                 <Col md='12'>
-                <h1>Proveedores</h1>
-                <Button variant='primary' onClick={() => setShowAddSupplier(true)}>
-                    Agregar Proveedor
-                </Button>
-                <SupplierForm
-                    onAddSupplier={addSupplier}
-                    show={showAddSupplier}
-                    onHide={() => setShowAddSupplier(false)}
-                />
-                <SuppliersList suppliers={suppliers} onViewSupplier={onViewSupplier} editSupplier={editSupplier} onDeleteSupplier={onDeleteSupplier}/>
-                <Modal show={showDeleteSuccess} onHide={handleCloseDeleteSuccess}>
-          <Modal.Header closeButton>
-            <Modal.Title>Proveedor Eliminado</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            El proveedor se ha borrado exitosamente
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="primary" onClick={handleCloseDeleteSuccess}>
-              Cerrar
-            </Button>
-          </Modal.Footer>
-        </Modal>
-        <Modal show={showDeleteError} onHide={handleCloseDeleteError}>
-          <Modal.Header closeButton>
-            <Modal.Title>Error eliminando el proveedor</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            {deleteErrorMessage}
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant='primary' onClick={handleCloseDeleteError}>
-              Cerrar
-            </Button>
-          </Modal.Footer>
-        </Modal>
+                    <h1>Proveedores</h1>
+                    <Button variant='primary' onClick={() => setShowAddSupplier(true)}>
+                        Agregar Proveedor
+                    </Button>
+                    <SupplierForm
+                        onAddSupplier={addSupplier}
+                        show={showAddSupplier}
+                        onHide={() => setShowAddSupplier(false)}
+                    />
+                    <SuppliersList suppliers={suppliers} onViewSupplier={onViewSupplier} editSupplier={editSupplier} onDeleteSupplier={onDeleteSupplier}/>
+                    <Modal show={showDeleteSuccess} onHide={handleCloseDeleteSuccess}>
+                        <Modal.Header closeButton>
+                            <Modal.Title>Proveedor Eliminado</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            El proveedor se ha borrado exitosamente
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button variant="primary" onClick={handleCloseDeleteSuccess}>
+                            Cerrar
+                            </Button>
+                        </Modal.Footer>
+                        </Modal>
+                        <Modal show={showDeleteError} onHide={handleCloseDeleteError}>
+                        <Modal.Header closeButton>
+                            <Modal.Title>Error eliminando el proveedor</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            {deleteErrorMessage}
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button variant='primary' onClick={handleCloseDeleteError}>
+                            Cerrar
+                            </Button>
+                        </Modal.Footer>
+                    </Modal>
                 </Col>
 
             </Row>

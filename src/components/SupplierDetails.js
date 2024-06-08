@@ -10,10 +10,6 @@ function SupplierDetails ({ supplier, onEditSupplier, materials }) {
     const [showEditModal, setShowEditModal] = useState(false);
     const [editedSupplier, setEditedSupplier] = useState(supplier);
     console.log(materials);
-    
-    useEffect(() => {
-
-    })
 
     const handleEdit = () => {
         setShowEditModal(true);
