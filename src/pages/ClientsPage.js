@@ -84,7 +84,7 @@ function ClientsPage() {
     <Container>
       <Row>
         <Col md="12">
-          <h1>Clients</h1>
+          <h1>Clientes</h1>
           <Button variant="primary" onClick={() => setShowAddClient(true)}>
             Add Client
           </Button>
