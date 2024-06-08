@@ -8,6 +8,7 @@ import SuppliersPage from './pages/SuppliersPage';
 import MaterialsPage from './pages/MaterialsPage';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import logo from './logo.svg';
 
 function App() {
   console.log('Rendering App component');
@@ -15,7 +16,15 @@ function App() {
     <BrowserRouter>
       <div className="container-fluid">
         <div className="row">
-          <Navbar  bg="dark" data-bs-theme="dark" expand="lg" fixed="top">
+          <Navbar  bg="dark" data-bs-theme="dark" expand="lg" fixed="top" className='ps-3'>
+            <Navbar.Brand href='/'>
+              <img 
+              src={logo}
+               alt='Logo'
+               width={30} 
+               height={30}
+              className='d-inline-block align-top'/>
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
