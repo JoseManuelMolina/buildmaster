@@ -61,7 +61,7 @@ function MaterialsPage(){
             <Row>
                 <Col md={12}>
                     <h1>Materiales</h1>
-                    <Button variant="primary" onClick={() => setShowAddMaterial(true)}>
+                    <Button variant="primary" className='mb-3' onClick={() => setShowAddMaterial(true)}>
                         Agregar Material
                     </Button>
                     <MaterialForm

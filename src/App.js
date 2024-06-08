@@ -15,16 +15,16 @@ function App() {
     <BrowserRouter>
       <div className="container-fluid">
         <div className="row">
-          <Navbar bg="light" expand="lg" fixed="top">
+          <Navbar  bg="dark" data-bs-theme="dark" expand="lg" fixed="top">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
-                <Nav.Link as={Link} to="/">Dashboard</Nav.Link>
-                <Nav.Link as={Link} to="/clients">Clients</Nav.Link>
-                <Nav.Link as={Link} to="/projects">Projects</Nav.Link>
-                <Nav.Link as={Link} to="/advances">Advances</Nav.Link>
-                <Nav.Link as={Link} to="/suppliers">Proveedores</Nav.Link>
-                <Nav.Link as={Link} to="/materials">Materiales</Nav.Link>
+                <Nav.Link as={Link} to="/" className='text-light'>Inicio</Nav.Link>
+                <Nav.Link as={Link} to="/clients" className='text-light'>Clientes</Nav.Link>
+                <Nav.Link as={Link} to="/projects" className='text-light'>Proyectos</Nav.Link>
+                <Nav.Link as={Link} to="/advances" className='text-light'>Advances</Nav.Link>
+                <Nav.Link as={Link} to="/suppliers" className='text-light'>Proveedores</Nav.Link>
+                <Nav.Link as={Link} to="/materials" className='text-light'>Materiales</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>

@@ -32,13 +32,13 @@ function MaterialsList ({ materials, onViewMaterial, editMaterial, onDeleteMater
 
     return (
         <>
-            <Table striped bordered hover>
+            <Table striped hover variant='dark'>
                 <thead>
                     <tr>
                         <th>#</th>
                         <th>Nombre</th>
                         <th>Cantidad</th>
-                        <th>Coste</th>
+                        <th>Coste/unidad</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
@@ -49,9 +49,9 @@ function MaterialsList ({ materials, onViewMaterial, editMaterial, onDeleteMater
                                 <td>{material.id}</td>
                                 <td>{material.nombre}</td>
                                 <td>{material.cantidad}</td>
-                                <td>{material.coste}</td>
+                                <td>{material.coste}€</td>
                                 <td>
-                                    <Button variant="primary" onClick={() => handleViewMaterial(material)}>Ver</Button>
+                                    <Button variant="primary" className='me-3' onClick={() => handleViewMaterial(material)}>Ver</Button>
                                     <DeleteMaterialButton material={material} onDeleteMaterial={handleDeleteMaterial}>Eliminar</DeleteMaterialButton>
                                 </td>
                             </tr>

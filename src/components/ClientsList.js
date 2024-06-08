@@ -28,7 +28,7 @@ function ClientsList({ clients, onViewClient, editClient, onDeleteClient }) {
 
   return (
     <>
-      <Table striped bordered hover>
+      <Table striped hover variant='dark'>
         <thead>
           <tr>
             <th>#</th>
@@ -37,7 +37,7 @@ function ClientsList({ clients, onViewClient, editClient, onDeleteClient }) {
             <th>Persona de Contacto</th>
             <th>Email</th>
             <th>Dirección</th>
-            <th></th>
+            <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
@@ -50,8 +50,8 @@ function ClientsList({ clients, onViewClient, editClient, onDeleteClient }) {
               <td>{client.email}</td>
               <td>{client.direccion}</td>
               <td>
-                <Button variant="primary" onClick={() => handleViewClient(client)}>
-                  View
+                <Button variant="primary" className='me-3' onClick={() => handleViewClient(client)}>
+                  Ver
                 </Button>
                 <DeleteClientButton client={client} onDeleteClient={onDeleteClient} />
               </td>
@@ -61,7 +61,7 @@ function ClientsList({ clients, onViewClient, editClient, onDeleteClient }) {
       </Table>
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
-          <Modal.Title>Client Details</Modal.Title>
+          <Modal.Title>Detalles del Cliente</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {currentClient && (

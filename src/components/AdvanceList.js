@@ -33,7 +33,7 @@ function AdvancesList({advances, onViewAdvance, editAdvance, onDeleteAdvance, pr
 
     return (
         <>
-            <Table striped bordered hover>
+            <Table striped hover variant='dark'>
                 <thead>
                     <tr>
                         <th>#</th>
@@ -54,7 +54,7 @@ function AdvancesList({advances, onViewAdvance, editAdvance, onDeleteAdvance, pr
                                 <td>{advance.descripcion}</td>
                                 <td>{advance.porcentajeCompletado}%</td>
                                 <td>
-                                    <Button variant="primary" onClick={() => handleViewAdvance(advance)}>
+                                    <Button variant="primary" className='me-3' onClick={() => handleViewAdvance(advance)}>
                                         Ver
                                     </Button>
                                     <DeleteAdvanceButton advance={advance} onDeleteAdvance={handleDeleteAdvance} />

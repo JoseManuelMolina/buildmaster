@@ -46,7 +46,7 @@ function SuppliersList ({ suppliers, onViewSupplier, editSupplier, onDeleteSuppl
 
     return (
         <>
-            <Table striped bordered hover>
+            <Table striped hover variant='dark'>
                 <thead>
                     <tr>
                         <th>#</th>
@@ -65,7 +65,7 @@ function SuppliersList ({ suppliers, onViewSupplier, editSupplier, onDeleteSuppl
                                 <td>{supplier.direccion}</td>
                                 <td>{supplier.telefono}</td>
                                 <td>
-                                    <Button variant="primary" onClick={() => handleViewSupplier(supplier)}>Ver</Button>
+                                    <Button variant="primary" className='me-3' onClick={() => handleViewSupplier(supplier)}>Ver</Button>
                                     <DeleteSupplierButton supplier={supplier} onDeleteSupplier={handleDeleteSupplier}>Eliminar</DeleteSupplierButton>
                                 </td>
                             </tr>

@@ -83,7 +83,7 @@ function SuppliersPage(){
             <Row>
                 <Col md='12'>
                     <h1>Proveedores</h1>
-                    <Button variant='primary' onClick={() => setShowAddSupplier(true)}>
+                    <Button variant='primary' className='mb-3' onClick={() => setShowAddSupplier(true)}>
                         Agregar Proveedor
                     </Button>
                     <SupplierForm

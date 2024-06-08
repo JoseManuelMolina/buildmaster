@@ -94,7 +94,7 @@ function AdvanceForm({ onAddAdvance, projects, show, onHide}){
                             ))}
                         </Form.Select>
                     </Form.Group>
-                    <Button variant="primary" type="submit">
+                    <Button variant="primary" className='mt-3' type="submit">
                         Agregar Avance
                     </Button>
                 </Form>

@@ -46,7 +46,7 @@ function MaterialForm({ onAddMaterial, show, onHide }){
                             onChange={(e) => setCoste(e.target.value)}
                         />
                     </Form.Group>
-                    <Button variant='primary' type='submit'>
+                    <Button variant='primary' className='mt-3' type='submit'>
                         Agregar Material
                     </Button>
                 </Form>

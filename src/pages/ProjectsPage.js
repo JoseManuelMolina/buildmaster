@@ -75,8 +75,8 @@ function ProjectsPage() {
             <Row>
                 <Col md="12">
                     <h1>Proyectos</h1>
-                    <Button variant="primary" onClick={()=> setShowAddProject(true)}>
-                        Add Project
+                    <Button variant="primary" className='mb-3' onClick={()=> setShowAddProject(true)}>
+                        Agregar Proyecto
                     </Button>
                     <ProjectForm
                         onAddProject={addProject}

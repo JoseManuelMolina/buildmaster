@@ -108,8 +108,8 @@ function ProjectForm({ onAddProject, clients, show, onHide }) {
               ))}
             </Form.Select>
           </Form.Group>
-          <Button variant="primary" type="submit">
-            Add
+          <Button variant="primary" className='mt-3' type="submit">
+            Agregar
           </Button>
         </Form>
       </Modal.Body>

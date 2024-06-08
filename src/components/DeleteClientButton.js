@@ -23,11 +23,11 @@ function DeleteClientButton({ onDeleteClient, client }) {
   return (
     <>
       <Button variant="danger" onClick={() => setShowConfirmModal(true)}>
-        Delete
+        Eliminar
       </Button>
       <Modal show={showConfirmModal} onHide={handleCancel}>
         <Modal.Header closeButton>
-          <Modal.Title>Confirm Delete</Modal.Title>
+          <Modal.Title>Confirmar Eliminación</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {client ? (
@@ -40,10 +40,10 @@ function DeleteClientButton({ onDeleteClient, client }) {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCancel}>
-            Cancel
+            Cancelar
           </Button>
           <Button variant="danger" onClick={handleDelete}>
-            Delete
+            Eliminar
           </Button>
         </Modal.Footer>
       </Modal>

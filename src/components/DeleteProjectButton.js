@@ -23,11 +23,11 @@ function DeleteProjectButton({ onDeleteProject, project }) {
   return (
     <>
       <Button variant="danger" onClick={() => setShowConfirmModal(true)}>
-        Delete
+        Eliminar
       </Button>
       <Modal show={showConfirmModal} onHide={handleCancel}>
         <Modal.Header closeButton>
-          <Modal.Title>Confirm Delete</Modal.Title>
+          <Modal.Title>Confirmar Elimincación</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {project ? (
@@ -40,10 +40,10 @@ function DeleteProjectButton({ onDeleteProject, project }) {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCancel}>
-            Cancel
+            Cancelar
           </Button>
           <Button variant="danger" onClick={handleDelete}>
-            Delete
+            Eliminar
           </Button>
         </Modal.Footer>
       </Modal>

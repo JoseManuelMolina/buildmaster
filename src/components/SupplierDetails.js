@@ -65,7 +65,7 @@ function SupplierDetails ({ supplier, onEditSupplier, materials }) {
       };
 
       const handleAddMaterial = () => {
-        const materialId = prompt("Enter the ID of the material to add:");
+        const materialId = prompt("Inserte el id del material a añadir:");
         if (materialId) {
           api.put(`/proveedores/materiales/${supplier.id}/${materialId}`)
             .then((response) => {
@@ -135,7 +135,7 @@ function SupplierDetails ({ supplier, onEditSupplier, materials }) {
                 ) : null}
             </Card.Body>
             <Card.Footer>
-                <Button variant="primary" onClick={handleEdit}>Editar</Button>
+                <Button variant="primary" className='me-3' onClick={handleEdit}>Editar</Button>
                 <Button variant="success" onClick={handleAddMaterial}>Agregar Material</Button>
                 <Modal show={showEditModal} onHide={handleCancel}>
                     <Modal.Header closeButton>

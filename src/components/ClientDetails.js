@@ -88,16 +88,16 @@ function ClientDetails({ client, onEditClient }) {
       <Card.Footer>
         {editing? (
           <>
-            <Button variant="primary" onClick={handleSave}>
-              Save
+            <Button variant="primary" className='me-3' onClick={handleSave}>
+              Guardar
             </Button>
-            <Button variant="secondary" onClick={handleCancel}>
-              Cancel
+            <Button variant="danger" onClick={handleCancel}>
+              Cancelar
             </Button>
           </>
         ) : (
           <Button variant="primary" onClick={handleEdit}>
-            Edit
+            Editar
           </Button>
         )}
       </Card.Footer>

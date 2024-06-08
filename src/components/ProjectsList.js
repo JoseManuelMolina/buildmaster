@@ -32,7 +32,7 @@ function ProjectsList({ projects, onViewProject, editProject, onDeleteProject, c
 
   return (
     <>
-      <Table striped bordered hover>
+      <Table striped hover variant='dark'>
         <thead>
           <tr>
             <th>#</th>
@@ -63,8 +63,8 @@ function ProjectsList({ projects, onViewProject, editProject, onDeleteProject, c
                 </td>
                 <td>{project.cliente?.razonSocial}</td>
                 <td>
-                  <Button variant="primary" onClick={() => handleViewProject(project)}>
-                    View
+                  <Button variant="primary" className='me-3' onClick={() => handleViewProject(project)}>
+                    Ver
                   </Button>
                   <DeleteProjectButton project={project} onDeleteProject={handleDeleteProject} />
                 </td>

@@ -46,7 +46,7 @@ function SupplierForm({ onAddSupplier, show, onHide}){
                             onChange={(e) => setTelefono(e.target.value)}
                         />
                     </Form.Group>
-                    <Button variant='primary' type='submit'>
+                    <Button variant='primary' className='mt-3' type='submit'>
                         Añadir
                     </Button>
                 </Form>

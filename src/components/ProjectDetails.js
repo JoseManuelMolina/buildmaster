@@ -78,11 +78,11 @@ function ProjectDetails({ project, onEditProject, clients }) {
       </Card.Body>
       <Card.Footer>
         <Button variant="primary" onClick={handleEdit}>
-          Edit
+          Editar
         </Button>
         <Modal show={showEditModal} onHide={handleCancel}>
           <Modal.Header closeButton>
-            <Modal.Title>Edit Project</Modal.Title>
+            <Modal.Title>Editar Proyecto</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Form>
@@ -146,10 +146,10 @@ function ProjectDetails({ project, onEditProject, clients }) {
           </Modal.Body>
           <Modal.Footer>
             <Button variant="primary" onClick={handleSave}>
-              Save
+              Guardar
             </Button>
-            <Button variant="secondary" onClick={handleCancel}>
-              Cancel
+            <Button variant="danger" onClick={handleCancel}>
+              Cancelar
             </Button>
           </Modal.Footer>
         </Modal>

@@ -130,7 +130,7 @@ function AdvanceDetails({ advance, onEditAdvance, projects}) {
                         <Button variant='primary' onClick={handleSave}>
                             Guardar
                         </Button>
-                        <Button variant='secondary' onClick={handleCancel}>
+                        <Button variant='danger' onClick={handleCancel}>
                             Cancelar
                         </Button>
                     </Modal.Footer>

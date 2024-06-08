@@ -75,7 +75,7 @@ function AdvancesPage() {
     <Row>
       <Col md="12">
         <h1>Avances</h1>
-        <Button variant="primary" onClick={() => setShowAddAdvance(true)}>
+        <Button variant="primary" className='mb-3' onClick={() => setShowAddAdvance(true)}>
           Agregar Avance
         </Button>
         <AdvanceForm

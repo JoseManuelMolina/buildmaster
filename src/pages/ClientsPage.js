@@ -85,12 +85,12 @@ function ClientsPage() {
       <Row>
         <Col md="12">
           <h1>Clientes</h1>
-          <Button variant="primary" onClick={() => setShowAddClient(true)}>
-            Add Client
+          <Button variant="primary" className='mb-3' onClick={() => setShowAddClient(true)}>
+            Agregar Cliente
           </Button>
           <Modal show={showAddClient} onHide={onCloseModal}>
             <Modal.Header closeButton>
-              <Modal.Title>Add Client</Modal.Title>
+              <Modal.Title>Agregar Cliente</Modal.Title>
             </Modal.Header>
             <Modal.Body>
               <ClientForm onAddClient={addClient} />
@@ -104,18 +104,18 @@ function ClientsPage() {
               </Button>
               <Modal show={showEditClient} onHide={onCloseModal}>
                 <Modal.Header closeButton>
-                  <Modal.Title>Edit Client</Modal.Title>
+                  <Modal.Title>Editar Cliente</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                   <EditClientForm client={currentClient} onEditClient={editClient} />
                 </Modal.Body>
               </Modal>
               <Button variant="danger" onClick={() => setShowDeleteClient(true)}>
-                Delete
+                Eliminar
               </Button>
               <Modal show={showDeleteClient} onHide={onCloseModal}>
                 <Modal.Header closeButton>
-                  <Modal.Title>Delete Client</Modal.Title>
+                  <Modal.Title>Eliminar Cliente</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                   <DeleteClientButton onDeleteClient={() => deleteClient(currentClient)} />
@@ -146,7 +146,7 @@ function ClientsPage() {
             </Modal.Body>
             <Modal.Footer>
               <Button variant="primary" onClick={handleCloseDeleteSuccess}>
-                Close
+                Cerrar
               </Button>
             </Modal.Footer>
           </Modal>

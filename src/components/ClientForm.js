@@ -60,8 +60,8 @@ function ClientForm({ onAddClient }) {
           onChange={(event) => setDireccion(event.target.value)}
         />
       </Form.Group>
-      <Button variant="primary" type="submit">
-        Add
+      <Button variant="primary" className='mt-3' type="submit">
+        Agregar
       </Button>
     </Form>
   );
