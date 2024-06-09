@@ -31,7 +31,7 @@ function App() {
                 <Nav.Link as={Link} to="/" className='text-light'>Inicio</Nav.Link>
                 <Nav.Link as={Link} to="/clients" className='text-light'>Clientes</Nav.Link>
                 <Nav.Link as={Link} to="/projects" className='text-light'>Proyectos</Nav.Link>
-                <Nav.Link as={Link} to="/advances" className='text-light'>Advances</Nav.Link>
+                <Nav.Link as={Link} to="/advances" className='text-light'>Avances</Nav.Link>
                 <Nav.Link as={Link} to="/suppliers" className='text-light'>Proveedores</Nav.Link>
                 <Nav.Link as={Link} to="/materials" className='text-light'>Materiales</Nav.Link>
               </Nav>

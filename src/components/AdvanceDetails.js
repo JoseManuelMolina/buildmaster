@@ -71,7 +71,7 @@ function AdvanceDetails({ advance, onEditAdvance, projects}) {
                         <Card.Text>Fecha: {advance.fecha}</Card.Text>
                         <Card.Text>Descripción: {advance.descripcion}</Card.Text>
                         <Card.Text>Proyecto: {advance.proyecto.nombre}</Card.Text>
-                        <Card.Text>Porcentaje Completado: {advance.porcentajeCompletado}</Card.Text>
+                        <Card.Text>Porcentaje Completado: {advance.porcentajeCompletado}%</Card.Text>
                     </>
                 ) : null}
             </Card.Body>

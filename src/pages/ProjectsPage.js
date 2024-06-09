@@ -25,6 +25,7 @@ function ProjectsPage() {
     }, []);
 
     const addProject = (project) => {
+        console.log(project)
         api.post('/proyectos', project).then((response) => {
           setProjects([...projects, response.data]);
           setShowAddProject(false);

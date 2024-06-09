@@ -53,7 +53,7 @@ function ProjectForm({ onAddProject, clients, show, onHide }) {
   return (
     <Modal show={show} onHide={onHide}>
       <Modal.Header closeButton>
-        <Modal.Title>Add Project</Modal.Title>
+        <Modal.Title>Añadir Proyecto</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form onSubmit={handleSubmit}>

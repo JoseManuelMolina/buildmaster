@@ -51,7 +51,7 @@ function ProjectsList({ projects, onViewProject, editProject, onDeleteProject, c
               <tr key={project.id}>
                 <td>{project.id}</td>
                 <td>{project.nombre}</td>
-                <td>{project.presupuesto}</td>
+                <td>{project.presupuesto}€</td>
                 <td>{project.fechaInicio}</td>
                 <td>{project.categoria}</td>
                 <td>
